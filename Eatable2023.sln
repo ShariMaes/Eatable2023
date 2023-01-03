@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "EatableDB V1.0", "EatableDB V1.0.sqlproj", "{4DF67286-F7DB-4684-99F6-903AA4C43855}"
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Eatable2023", "Eatable2023.sqlproj", "{4DF67286-F7DB-4684-99F6-903AA4C43855}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

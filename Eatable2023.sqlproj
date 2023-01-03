@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <Name>EatableDB_V1.0</Name>
+    <Name>Eatable2023</Name>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
     <ProjectGuid>{4df67286-f7db-4684-99f6-903aa4c43855}</ProjectGuid>
@@ -69,7 +69,7 @@
     <Build Include="Tables\AST_Product2Store.sql" />
   </ItemGroup>
   <ItemGroup>
-    <RefactorLog Include="EatableDB V1.0.refactorlog" />
+    <RefactorLog Include="Eatable2023.refactorlog" />
   </ItemGroup>
   <ItemGroup>
     <None Include="SqlSchemaCompare.scmp" />
