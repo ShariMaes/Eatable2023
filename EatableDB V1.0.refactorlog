@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="5cba7bc8-3221-4991-bf44-d1989279d300" ChangeDateTime="10/10/2022 10:28:01">
+    <Property Name="ElementName" Value="[dbo].[StoreType].[Type]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[StoreType]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Caption" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="54ddb4d8-a59a-4dfd-b787-f292f53a9bcf" ChangeDateTime="10/10/2022 11:02:55">
+    <Property Name="ElementName" Value="[dbo].[Product].[IsFood]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Product]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="NutritionScore" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ea59d0c0-2a8d-4556-ba8f-8a9804968f43" ChangeDateTime="10/10/2022 11:05:41">
+    <Property Name="ElementName" Value="[dbo].[Product].[PrdocutDetailId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Product]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ProducttDetailId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5e334d99-0cd7-4274-9291-ac1bcd0423cd" ChangeDateTime="10/10/2022 11:05:45">
+    <Property Name="ElementName" Value="[dbo].[Product].[ProducttDetailId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Product]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ProductDetailId" />
+  </Operation>
+</Operations>
