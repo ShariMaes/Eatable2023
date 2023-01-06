@@ -1,23 +1,63 @@
 <table mat-table [dataSource]="products" class="mat-elevation-z8">
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef> No. </th>
-      <td mat-cell *matCellDef="let product"> {{product.name}} </td>
+    <ng-container matColumnDef="productName">
+      <th mat-header-cell *matHeaderCellDef> productName </th>
+      <td mat-cell *matCellDef="let product"> {{product.productName}} </td>
     </ng-container>
   
-    <ng-container matColumnDef="brand">
-      <th mat-header-cell *matHeaderCellDef> Name </th>
-      <td mat-cell *matCellDef="let product"> {{product.brand}} </td>
+    <ng-container matColumnDef="isFood">
+      <th mat-header-cell *matHeaderCellDef> isFood </th>
+      <td mat-cell *matCellDef="let product"> {{product.isFood}} </td>
     </ng-container>
   
-    <ng-container matColumnDef="price">
-      <th mat-header-cell *matHeaderCellDef> Weight </th>
-      <td mat-cell *matCellDef="let product"> {{product.price}} </td>
+    <ng-container matColumnDef="categorie">
+      <th mat-header-cell *matHeaderCellDef> categorie </th>
+      <td mat-cell *matCellDef="let product"> {{product.categorie}} </td>
     </ng-container>
   
-    <ng-container matColumnDef="store">
-      <th mat-header-cell *matHeaderCellDef> Symbol </th>
-      <td mat-cell *matCellDef="let product"> {{product.store}} </td>
+    <ng-container matColumnDef="subcategorie">
+      <th mat-header-cell *matHeaderCellDef> subcategorie </th>
+      <td mat-cell *matCellDef="let product"> {{product.subcategorie}} </td>
     </ng-container>
+
+  <ng-container matColumnDef="brand">
+    <th mat-header-cell *matHeaderCellDef> brand </th>
+    <td mat-cell *matCellDef="let product"> {{product.brand}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="store">
+    <th mat-header-cell *matHeaderCellDef> store </th>
+    <td mat-cell *matCellDef="let product"> {{product.store}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="volumePerUnit">
+    <th mat-header-cell *matHeaderCellDef> volumePerUnit </th>
+    <td mat-cell *matCellDef="let product"> {{product.volumePerUnit}} </td>
+  </ng-container>
+
+<ng-container matColumnDef="weight">
+  <th mat-header-cell *matHeaderCellDef> weight </th>
+  <td mat-cell *matCellDef="let product"> {{product.weight}} </td>
+</ng-container>
+
+<ng-container matColumnDef="unit">
+  <th mat-header-cell *matHeaderCellDef> unit </th>
+  <td mat-cell *matCellDef="let product"> {{product.unit}} </td>
+</ng-container>
+
+<ng-container matColumnDef="pricePerUnit">
+  <th mat-header-cell *matHeaderCellDef> pricePerUnit </th>
+  <td mat-cell *matCellDef="let product"> {{product.pricePerUnit}} </td>
+</ng-container>
+
+<ng-container matColumnDef="pricePerWeight">
+    <th mat-header-cell *matHeaderCellDef> pricePerWeight </th>
+    <td mat-cell *matCellDef="let product"> {{product.pricePerWeight}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="addedDate">
+    <th mat-header-cell *matHeaderCellDef> addedDate </th>
+    <td mat-cell *matCellDef="let product"> {{product.addedDate}} </td>
+  </ng-container>
   
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>

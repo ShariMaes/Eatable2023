@@ -1,6 +1,14 @@
 export interface IProduct {
-    name: string;
+    productName: string;
+    isFood: number;
+    categorie: string;
+    subcategorie: string;
     brand: string;
-    price: number;
     store: string;
+    volumePerUnit: number;
+    weight: number;
+    unit: string;
+    pricePerUnit: number;
+    pricePerWeight: number;
+    addedDate: string;
   }

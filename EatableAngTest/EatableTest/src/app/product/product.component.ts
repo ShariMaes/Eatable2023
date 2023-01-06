@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IProduct } from './product';
+import { ProductService } from './product.service';
 
 @Component({
   selector: 'app-product',
@@ -8,13 +9,18 @@ import { IProduct } from './product';
 })
 
 export class ProductComponent{
-  displayedColumns: string[] = ['name', 'brand', 'price', 'store'];
-  products : IProduct[] = [
-    {name: 'Crackers', brand: 'Wasa', price: 3.5, store: 'Carrefour MZ'},
-    {name: 'Druiven pitloos', brand: 'Carrefour Bio', price: 1.15, store: 'Carrefour MZ'},
-    {name: 'Speltwafels', brand: 'Bio', price: 1.49, store: 'Aldi'},
-    {name: 'Citroensap', brand: 'Regalo', price: 0.49, store: 'Aldi'},
-    {name: 'Ketchup', brand: 'Carrefour Simple', price: 1.49, store: 'Carrefour MZ'},
-    {name: 'Wodka', brand: 'Imperial', price: 10.99, store: 'Carrefour MZ'},
-  ];
+  displayedColumns: string[] = ['productName', 'isFood', 'categorie', 
+  'subcategorie', 'brand', 'store', 'volumePerUnit', 'weight',
+  'unit', 'pricePerUnit', 'pricePerWeight', 'addedDate'];
+  products : IProduct[] = [];
+
+
+constructor(private productService: ProductService){}
+
+ngOnInit(): void{
+  this.productService.getProducts().subscribe({
+    next: products => this.products = products 
+  });
+  }
+
 }
