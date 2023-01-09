@@ -20,4 +20,11 @@ describe('ProductComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should fill filteredProducts', () => {
+    const fixture = TestBed.createComponent(ProductComponent);
+    const app = fixture.componentInstance;
+    component.ngOnInit();
+    expect(app.filteredProducts).toEqual(app.products);
+  });
 });

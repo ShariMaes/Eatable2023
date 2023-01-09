@@ -2,7 +2,7 @@ export interface IProduct {
     productName: string;
     isFood: number;
     categorie: string;
-    subcategorie: string;
+    subCategorie: string;
     brand: string;
     store: string;
     volumePerUnit: number;
