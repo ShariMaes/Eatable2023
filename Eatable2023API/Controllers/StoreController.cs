@@ -1,0 +1,61 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Eatable2023Application.Product;
+using Eatable2023Dto.Product;
+using Microsoft.AspNetCore.Mvc;
+
+namespace Eatable2023API.Controllers
+{
+    [Route("store")]
+    [ApiController]
+    public class StoreController : ControllerBase
+    {
+        private readonly IStoreManager _storeManager;
+        public StoreController(IStoreManager storeManager)
+        {
+            _storeManager = storeManager;
+        }
+
+        // GET: api/<StoreController>
+        [HttpGet]
+        [Route("GetStoreList")]
+        [Produces("application/json")]
+        public IEnumerable<StoreDto> GetStoreList()
+        {
+            var result = _storeManager.GetStoreList();
+            return result;
+        }
+
+        // GET api/<StoreController>/5
+        [HttpGet()]
+        [Route("GetStoreById")]
+        [Produces("application/json")]
+        public string Get(int id)
+        {
+            return "value";
+        }
+
+        // POST api/<StoreController>
+        [HttpPost]
+        [Route("CreateStore")]
+        public void CreateStore([FromBody] string value)
+        {
+        }
+
+        // PUT api/<StoreController>/5
+        [HttpPut()]
+        [Route("UpdateStoreById")]
+        public void UpdateStoreById(int id, [FromBody] string value)
+        {
+        }
+
+        // DELETE api/<StoreController>/5
+        [HttpDelete()]
+        [Route("DeleteStoreById")]
+        public void Delete(int id)
+        {
+        }
+    }
+}
