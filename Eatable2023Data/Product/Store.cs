@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Eatable2023Data.Product
 {
-    public class Store
+    public class Store: Base
     {
         public Guid StoreId { get; set; }
 

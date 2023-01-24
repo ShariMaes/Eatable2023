@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Eatable2023Data.General
 {
-    public class Address
+    public class Address: Base
     {
         public Guid AddressId { get; set; }
 
