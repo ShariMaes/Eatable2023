@@ -8,4 +8,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Eatable2023Application\Eatable2023Application.csproj" />
+    <ProjectReference Include="..\Eatable2023Dto\Eatable2023Dto.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Eatable2023Application.Product;
+using Eatable2023Dto.Product;
 using Microsoft.AspNetCore.Mvc;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace Eatable2023API.Controllers
 {
@@ -12,18 +12,20 @@ namespace Eatable2023API.Controllers
     [ApiController]
     public class StoreController : ControllerBase
     {
-        public StoreController()
+        private readonly IStoreManager _storeManager;
+        public StoreController(IStoreManager storeManager)
         {
-
+            _storeManager = storeManager;
         }
 
         // GET: api/<StoreController>
         [HttpGet]
         [Route("GetStoreList")]
         [Produces("application/json")]
-        public IEnumerable<string> GetStoreList()
+        public IEnumerable<StoreDto> GetStoreList()
         {
-            return new string[] { "value1", "value2" };
+            var result = _storeManager.GetStoreList();
+            return result;
         }
 
         // GET api/<StoreController>/5
