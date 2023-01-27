@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Eatable2023Dto.General
+namespace Eatable.Dto.General
 {
     public class AddressDto
     {

@@ -7,11 +7,12 @@
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="10.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Eatable2023Application\Eatable2023Application.csproj" />
-    <ProjectReference Include="..\Eatable2023Dto\Eatable2023Dto.csproj" />
+    <ProjectReference Include="..\Eatable2023Application\Eatable.Application.csproj" />
+    <ProjectReference Include="..\Eatable2023Dto\Eatable.Dto.csproj" />
   </ItemGroup>
 
 </Project>

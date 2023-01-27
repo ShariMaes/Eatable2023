@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Eatable2023Data.General
+namespace Eatable.Data.General
 {
     public class Base
     {

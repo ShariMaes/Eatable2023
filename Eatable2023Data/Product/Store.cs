@@ -1,11 +1,7 @@
-﻿using Eatable2023Data.General;
+﻿using Eatable.Data.General;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Eatable2023Data.Product
+namespace Eatable.Data.Product
 {
     public class Store: Base
     {

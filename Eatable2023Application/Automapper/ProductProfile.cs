@@ -1,15 +1,15 @@
 ﻿using AutoMapper;
-using Eatable2023Data.General;
-using Eatable2023Data.Product;
-using Eatable2023Dto.General;
-using Eatable2023Dto.Product;
+using Eatable.Data.General;
+using Eatable.Data.Product;
+using Eatable.Dto.General;
+using Eatable.Dto.Product;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Eatable2023Application.Automapper
+namespace Eatable.Application.Automapper
 {
     public class ProductProfile : Profile
     {

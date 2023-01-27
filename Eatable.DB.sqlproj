@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <Name>Eatable2023</Name>
+    <Name>Eatable.DB</Name>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
     <ProjectGuid>{4df67286-f7db-4684-99f6-903aa4c43855}</ProjectGuid>
@@ -73,6 +73,5 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="SqlSchemaCompare.scmp" />
-    <None Include="TextFile.txt" />
   </ItemGroup>
 </Project>

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6C51B27B-3FEC-41CD-9ED1-95F445D4E3B7}</ProjectGuid>
+    <ProjectGuid>{A1EB8C88-832D-47A9-9FC7-5EF11B18AF74}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Eatable2023Data</RootNamespace>
-    <AssemblyName>Eatable2023Data</AssemblyName>
+    <RootNamespace>Eatable.Dto</RootNamespace>
+    <AssemblyName>Eatable2023Dto</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -37,11 +37,18 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="General\Address.cs" />
-    <Compile Include="General\Base.cs" />
-    <Compile Include="Product\Store.cs" />
+    <Compile Include="General\AddressDto.cs" />
+    <Compile Include="Product\StoreDto.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="General\Enums\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

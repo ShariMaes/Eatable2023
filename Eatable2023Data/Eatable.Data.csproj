@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A1EB8C88-832D-47A9-9FC7-5EF11B18AF74}</ProjectGuid>
+    <ProjectGuid>{6C51B27B-3FEC-41CD-9ED1-95F445D4E3B7}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Eatable2023Dto</RootNamespace>
-    <AssemblyName>Eatable2023Dto</AssemblyName>
+    <RootNamespace>Eatable.Data</RootNamespace>
+    <AssemblyName>Eatable2023Data</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -37,13 +37,24 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="General\AddressDto.cs" />
-    <Compile Include="Product\StoreDto.cs" />
+    <Compile Include="General\Address.cs" />
+    <Compile Include="General\Base.cs" />
+    <Compile Include="Product\Store.cs" />
+    <Compile Include="Services\DBServices.cs" />
+    <Compile Include="Services\IDBServices.cs" />
+    <Compile Include="Services\IProductService.cs" />
+    <Compile Include="Services\ProductService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="General\Enums\" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.5, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.8.5\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
