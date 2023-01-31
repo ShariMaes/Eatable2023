@@ -42,6 +42,8 @@
   <ItemGroup>
     <Compile Include="General\Address.cs" />
     <Compile Include="General\Base.cs" />
+    <Compile Include="General\ContactInformation.cs" />
+    <Compile Include="Mappers\ProductMapper.cs" />
     <Compile Include="Product\Store.cs" />
     <Compile Include="Services\DBServices.cs" />
     <Compile Include="Services\IDBServices.cs" />
@@ -55,6 +57,12 @@
       <HintPath>..\packages\System.Data.SqlClient.4.8.5\lib\net461\System.Data.SqlClient.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Eatable.Common\Eatable.Common.csproj">
+      <Project>{C6FE93A3-644F-4292-B283-03C93D1DCB31}</Project>
+      <Name>Eatable.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

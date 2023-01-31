@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Store]
 (
-	[StoreId] INT NOT NULL PRIMARY KEY IDENTITY(1,1), 
+	[StoreId] UNIQUEIDENTIFIER NOT NULL PRIMARY KEY, 
     [StoreIdentifier] NVARCHAR(255) NOT NULL, 
     [StoreName] NVARCHAR(255) NOT NULL, 
     [StoreUrl] NVARCHAR(255) NULL,

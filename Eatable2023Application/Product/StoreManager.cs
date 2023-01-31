@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Eatable.Data.Services;
 using Eatable.Dto.Product;
+using System;
 using System.Collections.Generic;
 
 namespace Eatable.Application.Product
@@ -14,6 +15,14 @@ namespace Eatable.Application.Product
         {
             _productServices = service;
             _mapper = mapper;
+        }
+
+        public StoreDto GetStoreById(Guid Id)
+        {
+            var result = _productServices.GetStoreById(Id);
+            var mapped = _mapper.Map<StoreDto>(result);
+
+            return mapped;
         }
 
         public List<StoreDto> GetStoreList()

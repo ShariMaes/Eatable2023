@@ -1,4 +1,5 @@
-﻿using Eatable.Data.General;
+﻿using Eatable.Common.Enums;
+using Eatable.Data.General;
 using System;
 
 namespace Eatable.Data.Product
@@ -13,8 +14,14 @@ namespace Eatable.Data.Product
 
         public Address Address { get; set; }
 
-        public string StoreType { get; set; }
+        public StoreType StoreType { get; set; }
 
         public string OpeningHours { get; set; }
+
+        public ContactInformation ContactInformation { get; set; }
+
+        public string StoreUrl { get; set; }
+
+        public string LogoName { get; set; }
     }
 }

@@ -1,9 +1,6 @@
-﻿using Eatable.Dto.General;
+﻿using Eatable.Common.Enums;
+using Eatable.Dto.General;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Eatable.Dto.Product
 {
@@ -17,8 +14,10 @@ namespace Eatable.Dto.Product
         
         public AddressDto Address { get; set; }
      
-        public string StoreType { get; set; }
+        public StoreType StoreType { get; set; }
 
         public string OpeningHours { get; set; }
-}
+
+        public ContactInformationDto ContactInformation { get; set; }
+    }
 }

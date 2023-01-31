@@ -32,9 +32,10 @@ namespace Eatable.API.Controllers
         [HttpGet()]
         [Route("GetStoreById")]
         [Produces("application/json")]
-        public string Get(int id)
+        public StoreDto Get(Guid id)
         {
-            return "value";
+            var result = _storeManager.GetStoreById(id);
+            return result;
         }
 
         // POST api/<StoreController>

@@ -8,9 +8,13 @@ namespace Eatable.Data.General
 
         public string Street { get; set; }
 
-        public int HouseNumber { get; set; }
+        public string CountryCode { get; set; }
 
-        public int Postalcode { get; set; }
+        public string HouseNumber { get; set; }
+
+        public string BoxNumber { get; set; }
+
+        public string Postalcode { get; set; }
 
         public string City { get; set; }
     }

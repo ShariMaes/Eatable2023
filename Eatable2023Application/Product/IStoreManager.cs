@@ -11,5 +11,7 @@ namespace Eatable.Application.Product
     {
         List<StoreDto> GetStoreList();
 
+        StoreDto GetStoreById(Guid Id);
+
     }
 }

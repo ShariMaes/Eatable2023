@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eatable.Application", "Eata
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eatable.Dto", "Eatable2023Dto\Eatable.Dto.csproj", "{A1EB8C88-832D-47A9-9FC7-5EF11B18AF74}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eatable.Common", "Eatable.Common\Eatable.Common.csproj", "{C6FE93A3-644F-4292-B283-03C93D1DCB31}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,12 @@ Global
 		{A1EB8C88-832D-47A9-9FC7-5EF11B18AF74}.Development|Any CPU.Build.0 = Debug|Any CPU
 		{A1EB8C88-832D-47A9-9FC7-5EF11B18AF74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1EB8C88-832D-47A9-9FC7-5EF11B18AF74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6FE93A3-644F-4292-B283-03C93D1DCB31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6FE93A3-644F-4292-B283-03C93D1DCB31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6FE93A3-644F-4292-B283-03C93D1DCB31}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6FE93A3-644F-4292-B283-03C93D1DCB31}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{C6FE93A3-644F-4292-B283-03C93D1DCB31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6FE93A3-644F-4292-B283-03C93D1DCB31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
