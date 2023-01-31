@@ -13,10 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eatable.Application", "Eata
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eatable.Dto", "Eatable2023Dto\Eatable.Dto.csproj", "{A1EB8C88-832D-47A9-9FC7-5EF11B18AF74}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D2689B48-72CF-4823-A985-2F043A298623}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logo's", "Logo's", "{993E4068-8B07-49EC-AC32-10A2B5BC5928}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,9 +56,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{993E4068-8B07-49EC-AC32-10A2B5BC5928} = {D2689B48-72CF-4823-A985-2F043A298623}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {56728A1C-C91F-4A20-A599-D4A8C7E4AC41}

@@ -57,6 +57,7 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="Tables" />
+    <Folder Include="DBTemplate" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\StoreType.sql" />
@@ -67,11 +68,16 @@
     <Build Include="Tables\ProductCategory.sql" />
     <Build Include="Tables\AST_Product2ProductCategory.sql" />
     <Build Include="Tables\AST_Product2Store.sql" />
+    <Build Include="Tables\Resource.sql" />
+    <Build Include="Tables\Address.sql" />
+    <Build Include="Tables\ContactInformation.sql" />
+    <Build Include="Tables\ContactInformationType.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="Eatable2023.refactorlog" />
   </ItemGroup>
   <ItemGroup>
     <None Include="SqlSchemaCompare.scmp" />
+    <None Include="DBTemplate\DB.xlsx" />
   </ItemGroup>
 </Project>
