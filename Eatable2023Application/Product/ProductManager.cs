@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Eatable2023Application.Product
+namespace Eatable.Application.Product
 {
     public class ProductManager
     {

@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Eatable2023", "Eatable2023.sqlproj", "{4DF67286-F7DB-4684-99F6-903AA4C43855}"
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Eatable.DB", "Eatable.DB.sqlproj", "{4DF67286-F7DB-4684-99F6-903AA4C43855}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eatable2023API", "Eatable2023API\Eatable2023API.csproj", "{CE8B1572-6514-412E-B98D-A7ECBFE1797F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eatable.API", "Eatable2023API\Eatable.API.csproj", "{CE8B1572-6514-412E-B98D-A7ECBFE1797F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eatable2023Data", "Eatable2023Data\Eatable2023Data.csproj", "{6C51B27B-3FEC-41CD-9ED1-95F445D4E3B7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eatable.Data", "Eatable2023Data\Eatable.Data.csproj", "{6C51B27B-3FEC-41CD-9ED1-95F445D4E3B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eatable2023Application", "Eatable2023Application\Eatable2023Application.csproj", "{4B28FC7A-456E-4130-8FB7-AE126E59D36D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eatable.Application", "Eatable2023Application\Eatable.Application.csproj", "{4B28FC7A-456E-4130-8FB7-AE126E59D36D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eatable2023Dto", "Eatable2023Dto\Eatable2023Dto.csproj", "{A1EB8C88-832D-47A9-9FC7-5EF11B18AF74}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eatable.Dto", "Eatable2023Dto\Eatable.Dto.csproj", "{A1EB8C88-832D-47A9-9FC7-5EF11B18AF74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eatable.Common", "Eatable.Common\Eatable.Common.csproj", "{C6FE93A3-644F-4292-B283-03C93D1DCB31}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +55,12 @@ Global
 		{A1EB8C88-832D-47A9-9FC7-5EF11B18AF74}.Development|Any CPU.Build.0 = Debug|Any CPU
 		{A1EB8C88-832D-47A9-9FC7-5EF11B18AF74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1EB8C88-832D-47A9-9FC7-5EF11B18AF74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6FE93A3-644F-4292-B283-03C93D1DCB31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6FE93A3-644F-4292-B283-03C93D1DCB31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6FE93A3-644F-4292-B283-03C93D1DCB31}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6FE93A3-644F-4292-B283-03C93D1DCB31}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{C6FE93A3-644F-4292-B283-03C93D1DCB31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6FE93A3-644F-4292-B283-03C93D1DCB31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,20 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Eatable2023Data.General
+namespace Eatable.Data.General
 {
-    public class Address
+    public class Address: Base
     {
         public Guid AddressId { get; set; }
 
         public string Street { get; set; }
 
-        public int HouseNumber { get; set; }
+        public string CountryCode { get; set; }
 
-        public int Postalcode { get; set; }
+        public string HouseNumber { get; set; }
+
+        public string BoxNumber { get; set; }
+
+        public string Postalcode { get; set; }
 
         public string City { get; set; }
     }

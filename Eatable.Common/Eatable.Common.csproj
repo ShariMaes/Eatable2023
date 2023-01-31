@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A1EB8C88-832D-47A9-9FC7-5EF11B18AF74}</ProjectGuid>
+    <ProjectGuid>{C6FE93A3-644F-4292-B283-03C93D1DCB31}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Eatable2023Dto</RootNamespace>
-    <AssemblyName>Eatable2023Dto</AssemblyName>
+    <RootNamespace>Eatable.Common</RootNamespace>
+    <AssemblyName>Eatable.Common</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -39,11 +39,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="General\AddressDto.cs" />
-    <Compile Include="Product\StoreDto.cs" />
+    <Compile Include="Enums\ContactInformationType.cs" />
+    <Compile Include="Enums\StoreType.cs" />
+    <Compile Include="Exceptions\BusinessException.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="General\Enums\" />
+    <Folder Include="Constants\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,13 +1,10 @@
-﻿using Eatable2023Data.General;
+﻿using Eatable.Common.Enums;
+using Eatable.Data.General;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Eatable2023Data.Product
+namespace Eatable.Data.Product
 {
-    public class Store
+    public class Store: Base
     {
         public Guid StoreId { get; set; }
 
@@ -17,8 +14,14 @@ namespace Eatable2023Data.Product
 
         public Address Address { get; set; }
 
-        public string StoreType { get; set; }
+        public StoreType StoreType { get; set; }
 
         public string OpeningHours { get; set; }
+
+        public ContactInformation ContactInformation { get; set; }
+
+        public string StoreUrl { get; set; }
+
+        public string LogoName { get; set; }
     }
 }

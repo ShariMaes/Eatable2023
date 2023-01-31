@@ -1,18 +1,17 @@
-﻿using Eatable2023Application.Product;
+﻿using Eatable.Application.Product;
+using Eatable.Data.Services;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Eatable2023Application
+namespace Eatable.Application
 {
     public static class Services
     {
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
             services.AddTransient<IStoreManager, StoreManager>();
+
+            services.AddTransient<IDBServices, DBServices>();
+            services.AddTransient<IProductService, ProductService>();
 
             return services;
         }

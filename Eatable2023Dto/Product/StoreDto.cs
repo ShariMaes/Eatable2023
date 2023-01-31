@@ -1,11 +1,8 @@
-﻿using Eatable2023Dto.General;
+﻿using Eatable.Common.Enums;
+using Eatable.Dto.General;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Eatable2023Dto.Product
+namespace Eatable.Dto.Product
 {
     public class StoreDto
     {
@@ -17,8 +14,10 @@ namespace Eatable2023Dto.Product
         
         public AddressDto Address { get; set; }
      
-        public string StoreType { get; set; }
+        public StoreType StoreType { get; set; }
 
         public string OpeningHours { get; set; }
-}
+
+        public ContactInformationDto ContactInformation { get; set; }
+    }
 }

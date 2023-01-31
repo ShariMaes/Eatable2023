@@ -1,58 +1,36 @@
-﻿using Eatable2023Dto.General;
-using Eatable2023Dto.Product;
+﻿using AutoMapper;
+using Eatable.Data.Services;
+using Eatable.Dto.Product;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Eatable2023Application.Product
+namespace Eatable.Application.Product
 {
     public class StoreManager: IStoreManager
     {
-        public IEnumerable<StoreDto> GetStoreList()
+        private readonly IProductService _productServices;
+        private readonly IMapper _mapper;
+
+        public StoreManager(IProductService service, IMapper mapper)
         {
-            var list = new List<StoreDto>();
+            _productServices = service;
+            _mapper = mapper;
+        }
 
-            list.Add(
-                new StoreDto
-                {
-                    StoreId = new Guid(),
-                    StoreIdentifier = "",
-                    StoreName = "testwinkel",
-                    StoreType = "Fysical",
-                    OpeningHours = "Alle dagen",
-                    Address = new AddressDto
-                    {
-                        AddressId = new Guid(),
-                        Street = "Ambroos",
-                        HouseNumber = 130,
-                        Postalcode = 12134,
-                        City = "Zemst"
-                    }
-                }
-                    );
-                list.Add(
-                new StoreDto
-                {
-                    StoreId = new Guid(),
-                    StoreIdentifier = "",
-                    StoreName = "testwinkel2",
-                    StoreType = "Fysical",
-                    OpeningHours = "Alle dagen",
-                    Address = new AddressDto
-                    {
-                        AddressId = new Guid(),
-                        Street = "Vinkenlaan",
-                        HouseNumber = 13,
-                        Postalcode = 12135,
-                        City = "Eppegem"
-                    }
-                }) ;
+        public StoreDto GetStoreById(Guid Id)
+        {
+            var result = _productServices.GetStoreById(Id);
+            var mapped = _mapper.Map<StoreDto>(result);
 
-            //_mapper.Map();
+            return mapped;
+        }
 
-            return list;
+        public List<StoreDto> GetStoreList()
+        {
+            var list = _productServices.GetStoreList();
+            var mapped = _mapper.Map<List<StoreDto>>(list);
+
+            return mapped;
         }
     }
 }

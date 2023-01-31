@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Eatable2023Application.Product;
-using Eatable2023Dto.Product;
+using Eatable.Application.Product;
+using Eatable.Dto.Product;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Eatable2023API.Controllers
+namespace Eatable.API.Controllers
 {
     [Route("store")]
     [ApiController]
@@ -32,9 +32,10 @@ namespace Eatable2023API.Controllers
         [HttpGet()]
         [Route("GetStoreById")]
         [Produces("application/json")]
-        public string Get(int id)
+        public StoreDto Get(Guid id)
         {
-            return "value";
+            var result = _storeManager.GetStoreById(id);
+            return result;
         }
 
         // POST api/<StoreController>
