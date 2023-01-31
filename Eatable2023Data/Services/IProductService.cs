@@ -9,5 +9,7 @@ namespace Eatable.Data.Services
         List<Store> GetStoreList();
 
         Store GetStoreById(Guid id);
+
+        Store GetStoreByIdentifier(string identifier);
     }
 }

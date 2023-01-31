@@ -17,9 +17,17 @@ namespace Eatable.Application.Product
             _mapper = mapper;
         }
 
-        public StoreDto GetStoreById(Guid Id)
+        public StoreDto GetStoreById(Guid id)
         {
-            var result = _productServices.GetStoreById(Id);
+            var result = _productServices.GetStoreById(id);
+            var mapped = _mapper.Map<StoreDto>(result);
+
+            return mapped;
+        }
+
+        public StoreDto GetStoreByIdentifier(string identifier)
+        {
+            var result = _productServices.GetStoreByIdentifier(identifier);
             var mapped = _mapper.Map<StoreDto>(result);
 
             return mapped;

@@ -38,6 +38,18 @@ namespace Eatable.API.Controllers
             return result;
         }
 
+
+        // GET api/<StoreController>/5
+        [HttpGet()]
+        [Route("GetStoreByIdentifier")]
+        [Produces("application/json")]
+        public StoreDto Get(string identifier)
+        {
+            var result = _storeManager.GetStoreByIdentifier(identifier);
+            return result;
+        }
+
+
         // POST api/<StoreController>
         [HttpPost]
         [Route("CreateStore")]
