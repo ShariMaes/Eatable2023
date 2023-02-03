@@ -7,6 +7,8 @@ namespace Eatable.Data.General
     {
         public Guid ContactId { get; set; }
 
+        public Guid ObjectId { get; set; }
+
         public ContactInformationType ContactInformationTypeCode { get; set; }
 
         public string ContactInfo { get; set; }

@@ -1,4 +1,5 @@
-﻿using Eatable.Data.Product;
+﻿using Eatable.Data.General;
+using Eatable.Data.Product;
 using System;
 using System.Collections.Generic;
 
@@ -11,5 +12,7 @@ namespace Eatable.Data.Services
         Store GetStoreById(Guid id);
 
         Store GetStoreByIdentifier(string identifier);
+
+        List<ContactInformation> GetContactByObjectId(Guid id);
     }
 }

@@ -1,0 +1,40 @@
+
+<mat-drawer-container class="drawer-container">
+    <mat-drawer class="side-container" mode="side" opened>
+      <p>
+        <mat-form-field class="sidefilter-full-width">
+          <mat-label>Filter op naam</mat-label>
+          <input matInput type="text" [(ngModel)]="listFilter">
+          <button *ngIf="listFilter" matSuffix mat-icon-button aria-label="Clear" (click)="listFilter=''">
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field class="sidefilter-full-width">
+          <mat-label>Select winkels</mat-label>
+          <mat-select multiple>
+            <mat-option *ngFor="let store of stores" [value]="valueOptions">{{store.storeName}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </p>
+    </mat-drawer>
+
+    <mat-drawer-content class="main-container">
+        <table mat-table [dataSource]="filteredStores">
+          <ng-container matColumnDef="storeIdentifier">
+            <th mat-header-cell *matHeaderCellDef> Winkel Identifier </th>
+            <td mat-cell *matCellDef="let store"> {{store.storeIdentifier}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="storeName">
+            <th mat-header-cell *matHeaderCellDef> Winkel </th>
+            <td mat-cell *matCellDef="let store"> {{store.storeName}}</td>
+          </ng-container>
+    
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    
+      </mat-drawer-content>
+    </mat-drawer-container>

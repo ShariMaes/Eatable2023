@@ -1,4 +1,5 @@
-﻿using Eatable.Data.Product;
+﻿using Eatable.Data.General;
+using Eatable.Data.Product;
 using System.Data;
 
 namespace Eatable.Data.Mappers
@@ -44,10 +45,6 @@ namespace Eatable.Data.Mappers
             int ordinalHouseNumber = record.GetOrdinal("HouseNumber");
             int ordinalBoxNumber = record.GetOrdinal("BoxNumber");
             int ordinalPostalCode = record.GetOrdinal("PostalCode");
-            //ContactInfo
-            int ordinalContactId = record.GetOrdinal("ContactId");
-            int ordinalContactInfo = record.GetOrdinal("ContactInfo");
-            int ordinalContactType = record.GetOrdinal("ContactTypeCode");
 
             var temp = new Store();
             temp.StoreId = record.GetGuid(ordinalId);
@@ -70,18 +67,24 @@ namespace Eatable.Data.Mappers
                     Postalcode = record.IsDBNull(ordinalPostalCode) ? null : record.GetString(ordinalPostalCode)
                 };
             }
-            if (!record.IsDBNull(ordinalContactId))
-            {
-                temp.ContactInformation = new General.ContactInformation
-                {
-                    ContactId = record.GetGuid(ordinalContactId),
-                    ContactInfo = record.IsDBNull(ordinalContactInfo) ? null : record.GetString(ordinalContactInfo),
-                    ContactInformationTypeCode = (Common.Enums.ContactInformationType)record.GetInt32(ordinalContactType)
-                };
-             
-            }
+            return temp;
+        }
+
+        public static ContactInformation MapContactInfoOut(IDataRecord record)
+        {          
+            int ordinalContactId = record.GetOrdinal("ContactId");
+            int ordinalObjectId = record.GetOrdinal("ObjectId");
+            int ordinalContactInfo = record.GetOrdinal("ContactInfo");
+            int ordinalContactType = record.GetOrdinal("ContactTypeCode");
+
+            var temp = new ContactInformation();
+
+            temp.ContactId = record.GetGuid(ordinalContactId);
+            temp.ObjectId = record.GetGuid(ordinalObjectId);
+            temp.ContactInfo = record.IsDBNull(ordinalContactInfo) ? null : record.GetString(ordinalContactInfo);
+            temp.ContactInformationTypeCode = (Common.Enums.ContactInformationType)record.GetInt32(ordinalContactType);
 
             return temp;
-        } 
+        }
     }
 }

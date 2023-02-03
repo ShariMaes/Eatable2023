@@ -1,4 +1,5 @@
 ﻿using Eatable.Common.Exceptions;
+using Eatable.Data.General;
 using Eatable.Data.Mappers;
 using Eatable.Data.Product;
 using System;
@@ -63,13 +64,9 @@ namespace Eatable.Data.Services
                         a.StreetName,
                         a.HouseNumber,
                         a.BoxNumber,
-                        a.PostalCode,
-                        c.ContactId,
-                        c.ContactInfo,
-                        c.ContactTypeCode
+                        a.PostalCode
                         FROM [dbo].[Store] s
                         INNER JOIN [dbo].[Address] a ON a.AddressId = s.StoreAddressId
-                        INNER JOIN [dbo].[ContactInformation] c ON c.ContactId = s.StoreContactInformationId
                         where s.StoreId = @StoreId"
                         );
             using (var connection = new SqlConnection(_connectionString))
@@ -118,13 +115,9 @@ namespace Eatable.Data.Services
                         a.StreetName,
                         a.HouseNumber,
                         a.BoxNumber,
-                        a.PostalCode,
-                        c.ContactId,
-                        c.ContactInfo,
-                        c.ContactTypeCode
+                        a.PostalCode
                         FROM [dbo].[Store] s
                         INNER JOIN [dbo].[Address] a ON a.AddressId = s.StoreAddressId
-                        INNER JOIN [dbo].[ContactInformation] c ON c.ContactId = s.StoreContactInformationId
                         where s.StoreIdentifier = @StoreIdentifier"
                         );
             using (var connection = new SqlConnection(_connectionString))
@@ -144,6 +137,50 @@ namespace Eatable.Data.Services
                     while (reader.Read())
                     {
                         result = ProductMapper.MapStoreFullOut(reader);
+                    }
+                }
+            }
+
+            if (result == null)
+                throw new BusinessException("Failed to get");
+
+            return result;
+        }
+
+        public List<ContactInformation> GetContactByObjectId(Guid id)
+        {
+            var result = new List<ContactInformation>();
+
+            var strSql = new StringBuilder();
+            strSql.Append(@"SELECT
+                        [ContactId]
+                        ,[ObjectId]
+                        ,[ContactTypeCode]
+                        ,[ContactInfo]
+                        ,[Created]
+                        ,[CreatedBy]
+                        ,[Modified]
+                        ,[ModifiedBy]
+                        FROM [dbo].[ContactInformation]
+                        WHERE ObjectId = @ObjectId"
+                        );
+            using (var connection = new SqlConnection(_connectionString))
+            using (var command = connection.CreateCommand())
+            {
+                connection.Open();
+                command.CommandText = strSql.ToString();
+                command.Parameters.Add(new SqlParameter
+                {
+                    SqlDbType = System.Data.SqlDbType.UniqueIdentifier,
+                    ParameterName = "@ObjectId",
+                    Value = id
+                });
+
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        result.Add(ProductMapper.MapContactInfoOut(reader));
                     }
                 }
             }

@@ -20,6 +20,7 @@ namespace Eatable.Application.Product
         public StoreDto GetStoreById(Guid id)
         {
             var result = _productServices.GetStoreById(id);
+            result.ContactInformation = _productServices.GetContactByObjectId(result.StoreId);
             var mapped = _mapper.Map<StoreDto>(result);
 
             return mapped;
@@ -28,6 +29,7 @@ namespace Eatable.Application.Product
         public StoreDto GetStoreByIdentifier(string identifier)
         {
             var result = _productServices.GetStoreByIdentifier(identifier);
+            result.ContactInformation = _productServices.GetContactByObjectId(result.StoreId);
             var mapped = _mapper.Map<StoreDto>(result);
 
             return mapped;

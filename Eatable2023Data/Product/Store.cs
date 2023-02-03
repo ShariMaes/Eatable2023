@@ -1,6 +1,7 @@
 ﻿using Eatable.Common.Enums;
 using Eatable.Data.General;
 using System;
+using System.Collections.Generic;
 
 namespace Eatable.Data.Product
 {
@@ -18,7 +19,7 @@ namespace Eatable.Data.Product
 
         public string OpeningHours { get; set; }
 
-        public ContactInformation ContactInformation { get; set; }
+        public List<ContactInformation> ContactInformation { get; set; }
 
         public string StoreUrl { get; set; }
 

@@ -10,12 +10,14 @@ import { LayoutComponent } from './layout/layout.component';
 import { LayoutModule } from './layout/layout.module';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { StoreComponent } from './product/store/store.component';
 
 @NgModule({
   declarations: [
     LayoutComponent,
     AppComponent,
     ProductComponent,
+    StoreComponent,
        
   ],
   imports: [
