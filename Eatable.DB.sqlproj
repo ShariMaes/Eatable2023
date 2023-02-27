@@ -45,6 +45,7 @@
     <DefineTrace>true</DefineTrace>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
@@ -60,7 +61,6 @@
     <Folder Include="DBTemplate" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Tables\StoreType.sql" />
     <Build Include="Tables\Store.sql" />
     <Build Include="Tables\Product.sql" />
     <Build Include="Tables\ProductDetail.sql" />
@@ -71,7 +71,6 @@
     <Build Include="Tables\Resource.sql" />
     <Build Include="Tables\Address.sql" />
     <Build Include="Tables\ContactInformation.sql" />
-    <Build Include="Tables\ContactInformationType.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="Eatable2023.refactorlog" />

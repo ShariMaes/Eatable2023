@@ -7,6 +7,6 @@
     [Created] DATETIME2 NULL, 
     [CreatedBy] NVARCHAR(255) NULL, 
     [Modified] DATETIME2 NULL, 
-    [ModifiedBy] NVARCHAR(255) NULL, 
-    CONSTRAINT [FK_ContactInformation_ContactInformationType] FOREIGN KEY ([ContactTypeCode]) REFERENCES [ContactInformationType]([ContactInformationTypeCodeId]), 
+    [ModifiedBy] NVARCHAR(255) NULL
+     
 )

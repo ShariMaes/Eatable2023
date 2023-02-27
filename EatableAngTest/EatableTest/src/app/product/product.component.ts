@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { IProduct } from './product';
-import { ProductService } from './product.service';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-product',

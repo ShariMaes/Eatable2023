@@ -2,14 +2,14 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { IStore } from "../models/store";
-import { IProduct } from "./product";
+import { IProduct } from "../product/product";
 
 @Injectable({providedIn: 'root'})
 
 export class ProductService{
     private productUrl = 'files/productlist.json';
-    private getStoreList = 'https://localhost:44368/store/GetStoreList';
-    private getStoreById = 'files/productlist.json';
+    private getStoreListUrl = 'https://localhost:44368/store/GetStoreList';
+    private getStoreByIdUrl = 'https://localhost:44368/store/GetStoreById?';
     private getStoreByIdentifier = 'files/productlist.json';
 
     constructor(private http: HttpClient) {     
@@ -20,10 +20,10 @@ export class ProductService{
     }
 
     getStores(): Observable<IStore[]> {
-        return this.http.get<IStore[]>(this.getStoreList)
+        return this.http.get<IStore[]>(this.getStoreListUrl)
     }
 
-    getStore(): Observable<IStore[]> {
-        return this.http.get<IStore[]>(this.productUrl)
+    public getStoreById(id : string): Observable<IStore> {
+        return this.http.get<IStore>(this.getStoreByIdUrl)
     }
 }

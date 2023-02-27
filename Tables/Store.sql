@@ -12,7 +12,6 @@
     [CreatedBy] NVARCHAR(255) NULL, 
     [Modified] DATETIME2 NULL, 
     [ModifiedBy] NVARCHAR(255) NULL, 
-    CONSTRAINT [FK_Store_StoreType] FOREIGN KEY ([StoreTypeCode]) REFERENCES [StoreType](StoreTypeCodeId), 
     CONSTRAINT [FK_Store_Address] FOREIGN KEY ([StoreAddressId]) REFERENCES [Address]([AddressId])
     
     

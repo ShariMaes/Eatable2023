@@ -1,0 +1,27 @@
+<div class="modal-header">
+    <h4 class="modal-title">Hi there!</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.close()">X</button>
+</div>
+<div class="modal-body">
+    <div *ngIf="enabled">
+        <app-store-edit 
+        [storeToShow]='storeToShow'>
+        </app-store-edit>
+    </div> 
+    <div *ngIf="!enabled">
+        <app-store-detail 
+        [storeToShow]='storeToShow'>
+        </app-store-detail>
+    </div>
+</div>
+<div class="modal-footer">
+    <!-- <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>-->
+
+    <div *ngIf="enabled">
+        <button type="submit" class="btn btn-success btn-raised">Submit</button>
+        <button type="button" (click)="closeModal()" class="btn btn-danger btn-raised">Cancel</button>
+    </div>
+    <div *ngIf="!enabled">
+        <button enabled type="button" (click)="toEdit()" class="btn btn-warning btn-raised">Edit</button>
+    </div>
+</div>

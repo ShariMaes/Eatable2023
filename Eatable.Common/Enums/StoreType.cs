@@ -2,8 +2,10 @@
 {
     public enum StoreType
     {
-        PhysicalStore = 0,
+        NotDefined = 0,
 
-        Webstore = 1
+        PhysicalStore = 1,
+
+        Webstore = 2
     }
 }

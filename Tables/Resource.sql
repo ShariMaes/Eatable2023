@@ -2,6 +2,7 @@
 (
 	[ResourceId] Uniqueidentifier NOT NULL PRIMARY KEY, 
     [ResourceType] NVARCHAR(50) NOT NULL, 
+    [Section] NVARCHAR(50) NULL, 
     [Nld] NVARCHAR(255) NOT NULL, 
     [Fr] NVARCHAR(255) NOT NULL, 
     [Eng] NVARCHAR(255) NOT NULL, 

@@ -11,6 +11,13 @@ import { LayoutModule } from './layout/layout.module';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { StoreComponent } from './product/store/store.component';
+import { CommonModule } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { StoreCreateComponent } from './product/store/store-create/store-create.component';
+import { StoreEditComponent } from './product/store/store-edit/store-edit.component';
+import { StoreDetailComponent } from './product/store/store-detail/store-detail.component';
+import { StoreModalComponent } from './modals/store/store-modal.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +25,10 @@ import { StoreComponent } from './product/store/store.component';
     AppComponent,
     ProductComponent,
     StoreComponent,
-       
+    StoreCreateComponent,
+    StoreDetailComponent,
+    StoreEditComponent,
+    StoreModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +37,11 @@ import { StoreComponent } from './product/store/store.component';
     RouterModule,
     LayoutModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    CommonModule,
+    MatIconModule,
+    BrowserModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
