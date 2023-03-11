@@ -10,7 +10,7 @@ namespace Eatable.Application
         {
             services.AddTransient<IStoreManager, StoreManager>();
 
-            services.AddTransient<IDBServices, DBServices>();
+            //services.AddTransient<IDBServices, DBServices>();
             services.AddTransient<IProductService, ProductService>();
 
             return services;

@@ -1,9 +1,11 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Eatable.Data.General
 {
     public class Base
     {
+        [Required]
         public DateTime Created { get; set; } = DateTime.Now;
 
         public string CreatedBy { get; set; }

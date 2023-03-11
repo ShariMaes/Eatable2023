@@ -43,6 +43,7 @@
     <Compile Include="General\Address.cs" />
     <Compile Include="General\Base.cs" />
     <Compile Include="General\ContactInformation.cs" />
+    <Compile Include="General\Translation.cs" />
     <Compile Include="Mappers\ProductMapper.cs" />
     <Compile Include="Product\Store.cs" />
     <Compile Include="Services\DBServices.cs" />
@@ -52,6 +53,10 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.SqlClient, Version=4.6.1.5, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Data.SqlClient.4.8.5\lib\net461\System.Data.SqlClient.dll</HintPath>
