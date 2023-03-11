@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Eatable.Data.General;
+using Eatable.Data.Product;
 
 namespace Eatable.EFConsole
 {
@@ -22,11 +23,18 @@ namespace Eatable.EFConsole
             optionsBuilder.UseSqlServer(_connectionString);
         }
 
-        public DbSet<Translation> Translations { get; set; }
+        public DbSet<Translation> Translation { get; set; }
+        public DbSet<Address> Address { get; set; }
+        public DbSet<ContactInformation> ContactInformation { get; set; }
+        public DbSet<Store> Store { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Translation>();
+            modelBuilder.Entity<Address>();
+            modelBuilder.Entity<ContactInformation>();
+            modelBuilder.Entity<Store>();
         }
     }
         
