@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Eatable.Data.Services
 {
@@ -45,7 +46,7 @@ namespace Eatable.Data.Services
             return result;
         }
 
-        public Store GetStoreById(Guid id)
+        public async Task<Store> GetStoreById(Guid id)
         {
             var result = new Store();
 
@@ -93,10 +94,10 @@ namespace Eatable.Data.Services
             if (result == null)
                 throw new BusinessException("Failed to get");
 
-            return result;
+            return await Task.FromResult(result);
         }
 
-        public Store GetStoreByIdentifier(string identifier)
+        public async Task<Store> GetStoreByIdentifier(string identifier)
         {
             var result = new Store();
 
@@ -147,7 +148,7 @@ namespace Eatable.Data.Services
             return result;
         }
 
-        public List<ContactInformation> GetContactByObjectId(Guid id)
+        public async Task< List<ContactInformation>> GetContactByObjectId(Guid id)
         {
             var result = new List<ContactInformation>();
 

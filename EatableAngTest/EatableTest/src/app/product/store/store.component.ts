@@ -53,7 +53,11 @@ export class StoreComponent extends BaseComponent implements OnInit{
   }
 
   toDetail(store: IStore) {
-    this.storeModalService.openStoreModal(store, "true");
+    this.storeModalService.openStoreModal(store, "Active");
+  }
+
+  toCreate() {
+    this.storeModalService.openStoreModal(undefined, "NotActive");
   }
 
   performFilter(filterBy: string): IStore[] {

@@ -18,6 +18,7 @@ import { StoreCreateComponent } from './product/store/store-create/store-create.
 import { StoreEditComponent } from './product/store/store-edit/store-edit.component';
 import { StoreDetailComponent } from './product/store/store-detail/store-detail.component';
 import { StoreModalComponent } from './modals/store/store-modal.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,8 @@ import { StoreModalComponent } from './modals/store/store-modal.component';
     MatIconModule,
     BrowserModule,
     MatButtonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -12,25 +12,22 @@ import { ProductService } from "../../../services/product.service";
 
 export class StoreEditComponent extends BaseComponent implements OnInit{
     constructor(
-        private productService: ProductService,
-        private route: ActivatedRoute) {
-        super();
-    }
-    
+        private productService: ProductService) 
+        {super();}
 
-    public readOnlyMode = "false";
+    @Input()
+    readOnlyMode:string;
 
     @Input()
     storeToShow: IStore | undefined;
 
-    store: IStore | undefined;
-
-    ngOnInit(): void {
-        var id = this.route.snapshot.params['storeId'];
-        this.subscriptions.push(this.productService.getStoreById(id)
-            .subscribe(store => {
-                this.store = store;
-            }));
+    public async ngOnInit(): Promise<void> {
+        if (this.storeToShow != undefined) {
+           this.subscriptions.push(this.productService.getStoreById(this.storeToShow.storeId)
+                .subscribe(store => {
+                    this.storeToShow = store;
+                }));
+        }
     }
 
 }

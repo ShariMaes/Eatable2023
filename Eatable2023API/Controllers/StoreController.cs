@@ -32,9 +32,9 @@ namespace Eatable.API.Controllers
         [HttpGet()]
         [Route("GetStoreById")]
         [Produces("application/json")]
-        public StoreDto Get(Guid id)
+        public async Task<StoreDto> Get(Guid id)
         {
-            var result = _storeManager.GetStoreById(id);
+            var result = await _storeManager.GetStoreById(id);
             return result;
         }
 
@@ -43,9 +43,9 @@ namespace Eatable.API.Controllers
         [HttpGet()]
         [Route("GetStoreByIdentifier")]
         [Produces("application/json")]
-        public StoreDto Get(string identifier)
+        public async Task<StoreDto> Get(string identifier)
         {
-            var result = _storeManager.GetStoreByIdentifier(identifier);
+            var result = await _storeManager.GetStoreByIdentifier(identifier);
             return result;
         }
 

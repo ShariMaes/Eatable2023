@@ -1,6 +1,6 @@
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpParams, HttpResponse } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
+import { filter, map, Observable } from "rxjs";
 import { IStore } from "../models/store";
 import { IProduct } from "../product/product";
 
@@ -23,7 +23,9 @@ export class ProductService{
         return this.http.get<IStore[]>(this.getStoreListUrl)
     }
 
-    public getStoreById(id : string): Observable<IStore> {
-        return this.http.get<IStore>(this.getStoreByIdUrl)
+    getStoreById(id: string): Observable<IStore> {
+        const params = new HttpParams()
+            .set('id', id);
+        return this.http.get<IStore>(this.getStoreByIdUrl, { params })
     }
 }

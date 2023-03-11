@@ -7,8 +7,8 @@ export interface IStore {
     storeId: string;
     storeIdentifier: string;
     storeName: string;
-    address?: IAddress;
+    address?: null | IAddress;
     storeType: StoreType;
-    openingHours?: string;
-    contactInformation?: Array<IContactInformation>;
+    openingHours?: null | string;
+    contactInformation?: null | Array<IContactInformation>;
   }

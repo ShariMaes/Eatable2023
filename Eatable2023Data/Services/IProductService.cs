@@ -2,6 +2,7 @@
 using Eatable.Data.Product;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Eatable.Data.Services
 {
@@ -9,10 +10,10 @@ namespace Eatable.Data.Services
     {
         List<Store> GetStoreList();
 
-        Store GetStoreById(Guid id);
+        Task<Store> GetStoreById(Guid id);
 
-        Store GetStoreByIdentifier(string identifier);
+        Task<Store> GetStoreByIdentifier(string identifier);
 
-        List<ContactInformation> GetContactByObjectId(Guid id);
+        Task<List<ContactInformation>> GetContactByObjectId(Guid id);
     }
 }

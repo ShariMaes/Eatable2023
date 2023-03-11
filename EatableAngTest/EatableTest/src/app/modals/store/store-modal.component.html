@@ -3,25 +3,19 @@
     <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.close()">X</button>
 </div>
 <div class="modal-body">
-    <div *ngIf="enabled">
+    <div>
         <app-store-edit 
-        [storeToShow]='storeToShow'>
+        [storeToShow]='storeToShow'
+        [readOnlyMode]='readOnlyMode'>
         </app-store-edit>
     </div> 
-    <div *ngIf="!enabled">
-        <app-store-detail 
-        [storeToShow]='storeToShow'>
-        </app-store-detail>
-    </div>
 </div>
 <div class="modal-footer">
-    <!-- <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>-->
-
-    <div *ngIf="enabled">
+    <div *ngIf="this.readOnlyMode === 'NotActive'">
         <button type="submit" class="btn btn-success btn-raised">Submit</button>
         <button type="button" (click)="closeModal()" class="btn btn-danger btn-raised">Cancel</button>
     </div>
-    <div *ngIf="!enabled">
-        <button enabled type="button" (click)="toEdit()" class="btn btn-warning btn-raised">Edit</button>
+    <div *ngIf="this.readOnlyMode === 'Active'">
+        <button enabled type="button" (click)="toEdit(this.storeToShow, this.readOnlyMode)" class="btn btn-warning btn-raised">Edit</button>
     </div>
 </div>

@@ -13,38 +13,32 @@ import { StoreModalService } from "./store-modal.service";
 })
 
 export class StoreModalComponent extends BaseComponent implements OnInit {
-  @Input()
-  store: IStore | undefined;
-  @Input()
-  readOnlyMode: string | undefined;
 
-  public storeToShow: IStore | undefined;
-  public enabled: boolean = true;
+  @Input()
+  readOnlyMode: string;
+  @Input()
+  storeToShow: IStore | undefined;
 
   constructor(
     public readonly activeModal: NgbActiveModal,
-    public readonly storeModalService: StoreModalService
+    public readonly storeModalService: StoreModalService,
+    public readonly productService: ProductService
   ) { super() }
 
-
-  ngOnInit(): void {
-
+  public async ngOnInit(): Promise<void> {
     if (this.storeToShow != undefined) {
-      this.store = this.storeToShow;
-      if (this.readOnlyMode == 'true') {
-        this.enabled = false
-      }
+      this.subscriptions.push(this.productService.getStoreById(this.storeToShow.storeId)
+      .subscribe(store => {
+          this.storeToShow = store;
+      }));
     }
-
   }
 
   public toEdit(): void {
-    this.storeModalService.openStoreModal(this.store, "false");
+    this.storeModalService.openStoreModal(this.storeToShow, "NotActive");
   }
 
   public closeModal(): void {
-
       this.activeModal.close();
-    
   }
 }

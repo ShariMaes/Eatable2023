@@ -3,6 +3,7 @@ using Eatable.Data.Services;
 using Eatable.Dto.Product;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Eatable.Application.Product
 {
@@ -17,19 +18,19 @@ namespace Eatable.Application.Product
             _mapper = mapper;
         }
 
-        public StoreDto GetStoreById(Guid id)
+        public async Task<StoreDto> GetStoreById(Guid id)
         {
-            var result = _productServices.GetStoreById(id);
-            result.ContactInformation = _productServices.GetContactByObjectId(result.StoreId);
+            var result = await _productServices.GetStoreById(id);
+            result.ContactInformation = await _productServices.GetContactByObjectId(result.StoreId);
             var mapped = _mapper.Map<StoreDto>(result);
 
             return mapped;
         }
 
-        public StoreDto GetStoreByIdentifier(string identifier)
+        public async Task<StoreDto> GetStoreByIdentifier(string identifier)
         {
-            var result = _productServices.GetStoreByIdentifier(identifier);
-            result.ContactInformation = _productServices.GetContactByObjectId(result.StoreId);
+            var result = await _productServices.GetStoreByIdentifier(identifier);
+            result.ContactInformation = await _productServices.GetContactByObjectId(result.StoreId);
             var mapped = _mapper.Map<StoreDto>(result);
 
             return mapped;
