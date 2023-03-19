@@ -1,0 +1,26 @@
+USE [Eatable-D]
+GO
+
+INSERT INTO [dbo].[KeyIdentifier]
+           ([ObjectCode]
+           ,[Identifier])
+     VALUES
+           (1,
+           1)
+
+INSERT INTO [dbo].[KeyIdentifier]
+           ([ObjectCode]
+           ,[Identifier])
+     VALUES
+           (2,
+           1)
+
+INSERT INTO [dbo].[KeyIdentifier]
+           ([ObjectCode]
+           ,[Identifier])
+     VALUES
+           (3,
+           1)
+GO
+
+

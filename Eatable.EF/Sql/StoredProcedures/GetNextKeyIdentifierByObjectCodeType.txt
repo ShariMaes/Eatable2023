@@ -1,0 +1,27 @@
+USE [Eatable-D]
+GO
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[GetNextKeyIdentifierByObjectCodeType] (@ObjectCode SMALLINT = 1)
+
+AS
+BEGIN	
+	SET NOCOUNT ON;
+	BEGIN TRAN;
+	DECLARE @ouput as TABLE (
+		[ObjectCode] [INT],
+		[Identifier] [INT]
+	)
+	UPDATE KeyIdentifier
+	SET Identifier = Identifier + 1
+	OUTPUT INSERTED.ObjectCode, INSERTED.Identifier INTO @ouput
+	WHERE ObjectCode = @ObjectCode
+	COMMIT TRAN
+	SELECT *
+	FROM @ouput
+END
+GO
