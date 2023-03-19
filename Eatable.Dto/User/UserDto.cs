@@ -19,4 +19,4 @@ namespace Eatable.Dto.User
         public AddressDto Address { get; set; }
     }
 }
-}
+
