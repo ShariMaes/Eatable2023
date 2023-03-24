@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Eatable.Common.Enum;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -15,5 +16,7 @@ namespace Eatable.Dto.General
         public string Postalcode { get; set; }
 
         public string City { get; set; }
+
+        public CountryCodeType CountryCode { get; set; }
     }
 }

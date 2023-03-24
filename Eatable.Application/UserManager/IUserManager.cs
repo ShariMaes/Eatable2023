@@ -14,5 +14,7 @@ namespace Eatable.Application.UserManager
         Task<UserDto> GetUserById(Guid id);
         Task<UserDto> GetUserByIdentifier(string identifier);
         Task<List<UserDto>> GetUserList();
+        Task DeleteUser(UserDto userDto);
+        Task<UserDto> GetUserByName(string firstName, string lastName);
     }
 }
